@@ -1,0 +1,5 @@
+<app-customer-form *ngIf="!!customer" [customer]="customer" #customerForm (isValidChange)="formStatusChange($event)"
+    (formUpdated)="formUpdated($event)"></app-customer-form>
+<div class="container">
+    <button mat-raised-button class="button-container" (click)="saveCustomer()">Create</button>
+</div>

@@ -1,0 +1,33 @@
+<div [formGroup]="customerInfoForm" class="container">
+    <h1>Customer
+        <span *ngIf="!!customer.id">&nbsp;{{customer.id}}</span>
+    </h1>
+    <div class="info-container">
+        <div class="row">
+            <mat-form-field id="firstName" class="col-12 col-md-6 col-lg-6">
+                <input matInput placeholder="First Name" formControlName="firstName" />
+                <mat-error *ngIf="firstName.invalid">
+                    <span *ngIf="firstName.hasError('required')">First name is required.</span>
+                    <span *ngIf="firstName.hasError('maxlength')">First name cannot exceed 50 characters.</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field id="lastName" class="col-12 col-md-6 col-lg-6">
+                <input matInput placeholder="Last Name" formControlName="lastName" />
+                <mat-error *ngIf="lastName.invalid">
+                    <span *ngIf="lastName.hasError('required')">Last name is required.</span>
+                    <span *ngIf="lastName.hasError('maxlength')">Last name cannot exceed 50 characters.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field id="email" class="col-12 col-md-12 col-lg-12">
+                <input matInput placeholder="Email Address" formControlName="email" />
+                <mat-error *ngIf="email.invalid">
+                    <span *ngIf="email.hasError('required')">Email address is required.</span>
+                    <span *ngIf="email.hasError('maxlength')">Email address cannot exceed 50 characters.</span>
+                    <span *ngIf="email.hasError('email')">Please enter a valid email address</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "firstName": "Trevor",
+      "lastName": "Mak",
+      "email": "trevormak25@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Gavin",
+      "lastName": "Mak",
+      "email": "GavinMak@gmail.com"
+    },
+    {
+      "_firstName": "test",
+      "_lastName": "test",
+      "_email": "t@g",
+      "id": 3
+    },
+    {
+      "firstName": "ttt",
+      "lastName": "ttt",
+      "email": "sdasd@g",
+      "id": 4
+    },
+    {
+      "firstName": "Paul",
+      "lastName": "asdasd",
+      "email": "Paul@gmail.com",
+      "id": 5
+    },
+    {
+      "firstName": "test2",
+      "lastName": "test2",
+      "email": "test@gmail.com",
+      "id": 6
+    }
+  ]
+}

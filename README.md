@@ -2,9 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
+## JSON server
+
+Run `json-server --watch db.json` to start the json server. http://localhost:3000/
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `run start:proxy` for a dev server which will proxy api calls to http://localhost:3000/. Dev server will be on http://localhost:4200/. 
+The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

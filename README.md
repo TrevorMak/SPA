@@ -8,7 +8,7 @@ Run `json-server --watch db.json` to start the json server. http://localhost:300
 
 ## Development server
 
-Run `run start:proxy` for a dev server which will proxy api calls to http://localhost:3000/. Dev server will be on http://localhost:4200/. 
+Run `npm run start:proxy` for a dev server which will proxy api calls to http://localhost:3000/. Dev server will be on http://localhost:4200/. 
 The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding

@@ -29,7 +29,6 @@ export class CustomerFormComponent implements AfterViewInit {
 
   public ngAfterViewInit(): void {
 
-    // TODO further reading on why this is required
     Promise.resolve(this.customerForm).then((form) => {
       this.customerForm.addControl("customerInfo", this.customerInfo.customerInfoForm)
       this.isValid = form.valid;

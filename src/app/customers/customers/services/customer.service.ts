@@ -22,7 +22,21 @@ export class CustomerService {
             }));
   }
 
+  public delete(id: number): Observable<object>
+  {
+    return this.http.delete(`${this.baseUrl}/${id}`);
+  }
+
   public getAll(): Observable<any> {
     return this.http.get(this.baseUrl);
+  }
+
+  public getById(id: number): Observable<any> {
+    return this.http.get<Customer>(`${this.baseUrl}/${id}`);
+  }
+
+  public update(customer: Customer): Observable<object>
+  {
+    return this.http.put(`${this.baseUrl}/${customer.id}`, customer);
   }
 }

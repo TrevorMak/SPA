@@ -1,0 +1,16 @@
+<div [formGroup]="orderInfoForm" class="container">
+    <h1>Create Order
+        <span *ngIf="!!customer">for&nbsp;{{customer.firstName}}</span>
+    </h1>
+    <div class="info-container">
+        <div class="row">
+            <mat-form-field id="name" class="col-12 col-md-12 col-lg-12">
+                <input matInput placeholder="Order Name" formControlName="name" />
+                <mat-error *ngIf="name.invalid">
+                    <span *ngIf="name.hasError('required')">Order name is required.</span>
+                    <span *ngIf="name.hasError('maxlength')">Order name cannot exceed 50 characters.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+</div>

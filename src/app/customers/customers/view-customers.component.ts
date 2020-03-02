@@ -19,4 +19,8 @@ export class ViewCustomersComponent implements OnInit {
       //TODO add error
   }
 
+  public removeCustomer(customerId: number)
+  {
+    this.customers = this.customers.filter(customer => customer.id !== customerId);
+  }
 }

@@ -15,30 +15,40 @@ export class CustomerInfoComponent implements OnInit {
   @Input()
   public customer: Customer;
 
-  public firstName: FormControl;
+  public dob: FormControl;
 
-  public lastName: FormControl;
+  public email: BindableFormControl<Customer>;
 
-  public email: FormControl;
+  public firstName: BindableFormControl<Customer>;
+
+  public lastName: BindableFormControl<Customer>;
+
 
   constructor() { }
 
   ngOnInit() {
     this.firstName = new BindableFormControl(this.customer, "firstName");
-    this.firstName.setValidators([ Validators.required, Validators.maxLength(50) ])
+    this.firstName.setValidators([Validators.required, Validators.maxLength(50)])
 
     this.lastName = new BindableFormControl(this.customer, "lastName");
-    this.lastName.setValidators([ Validators.required, Validators.maxLength(50) ])
+    this.lastName.setValidators([Validators.required, Validators.maxLength(50)])
 
     this.email = new BindableFormControl(this.customer, "email");
     //Potentially add a custom validator using regex so we can define our own email formats.
-    this.email.setValidators([ Validators.required, Validators.maxLength(50), Validators.email ])
+    this.email.setValidators([Validators.required, Validators.maxLength(50), Validators.email])
+
+    this.dob = new FormControl(this.customer.dob);
+    this.dob.setValidators(Validators.required)
 
     this.customerInfoForm = new FormGroup({
       firstName: this.firstName,
       lastName: this.lastName,
-      email: this.email
+      email: this.email,
+      dob: this.dob
+    });
+
+    this.dob.valueChanges.subscribe((value: Date) => {
+      this.customer.dob = value;
     });
   }
-
 }

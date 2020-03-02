@@ -15,11 +15,7 @@ export class CreateCustomerComponent extends BaseCustomerPage {
   public constructor(cdr: ChangeDetectorRef, private route: ActivatedRoute,
     private customerService: CustomerService, private snackbar: MatSnackBar, private router: Router) {
     super(cdr);
-
-    // TODO: Implement this when we add update
-    // route.data.subscribe((data: {event: ICustomerCreatedEvent}) => {
-    //   this.customer = data.event.customer;
-    // }, (x) => {
+    
     this.customer = new Customer();
     this.snackbar
   }
@@ -36,7 +32,8 @@ export class CreateCustomerComponent extends BaseCustomerPage {
     {
       firstName: this.customer.firstName,
       lastName: this.customer.lastName,
-      email: this.customer.email
+      email: this.customer.email,
+      dob: this.customer.dob
     }
 
     this.customerService.create(newCustomer).subscribe(

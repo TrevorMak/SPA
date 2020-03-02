@@ -1,4 +1,5 @@
 import { Order } from 'src/app/orders/entities/order';
+import { isEqual } from 'lodash';
 
 export class Customer {
 
@@ -9,6 +10,24 @@ export class Customer {
     set id(value: number)
     {
         this._id = value;
+    }
+
+    private _dob: Date;
+    get dob(): Date {
+        return this._dob;
+    }
+    set dob(value: Date)
+    {
+        this._dob = value;
+    }
+    
+    private _email: string;
+    get email(): string {
+        return this._email;
+    }
+    set email(value: string)
+    {
+        this._email = value;
     }
 
     private _firstName: string;
@@ -29,15 +48,6 @@ export class Customer {
         this._lastName = value;
     }
 
-    private _email: string;
-    get email(): string {
-        return this._email;
-    }
-    set email(value: string)
-    {
-        this._email = value;
-    }
-
     private _orders: Array<Order>;
     get orders(): Array<Order> {
         return this._orders;
@@ -46,5 +56,4 @@ export class Customer {
     {
         this._orders = value;
     }
-    
 }

@@ -22,6 +22,8 @@ import { ProductCostComponent } from './products/form/product-cost/product-cost.
 import { OrderInfoComponent } from './orders/form/order-form/order-info.component';
 import { CreateOrderComponent } from './orders/order-create.component';
 import { ProductService } from './products/services/product.service';
+import { OrderService } from './orders/services/order-service';
+import { ViewOrdersComponent } from './orders/view-orders.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { ProductService } from './products/services/product.service';
     OrderInfoComponent,
     ProductCostsComponent,
     ProductCostComponent,
-    CreateOrderComponent
+    CreateOrderComponent,
+    ViewOrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +60,7 @@ import { ProductService } from './products/services/product.service';
     MatAutocompleteModule
   ],
   providers: [
+    OrderService,
     CustomerService,
     ProductService,
     {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 5000}},

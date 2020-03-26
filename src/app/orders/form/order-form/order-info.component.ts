@@ -16,7 +16,8 @@ export class OrderInfoComponent implements OnInit {
 
   public orderInfoForm: FormGroup
 
-  public order: Order = new Order();
+  @Input()
+  public order: Order;
 
   public name: BindableFormControl<Order>;
 

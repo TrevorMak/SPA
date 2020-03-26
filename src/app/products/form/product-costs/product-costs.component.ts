@@ -13,16 +13,32 @@ export class ProductCostsComponent implements OnInit {
 
   public products: Array<Product> = new Array<Product>();
 
+  public 
+
   @Input()
   public productsCosts: Array<ProductCost>;
+
+  public productCostsForm: FormArray = new FormArray([]);
 
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
-    this.productService.getAll().subscribe((products) =>
-    {
+    this.productService.getAll().subscribe((products) => {
       this.products = products;
+
+      for (let product of this.products)
+      {
+        const newProductCost = new ProductCost();
+        newProductCost.product = product;
+        newProductCost.productId = product.id;
+        this.productsCosts.push(newProductCost);
+      }
     })
+  }
+
+  public addProductCost() {
+
+    this.productsCosts.push(new ProductCost());
   }
 
 }

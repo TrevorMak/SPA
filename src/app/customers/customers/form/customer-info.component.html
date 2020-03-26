@@ -1,6 +1,6 @@
 <div [formGroup]="customerInfoForm" class="container">
-    <h1>Customer
-        <span *ngIf="!!customer.id">&nbsp;{{customer.id}}</span>
+    <h1 *ngIf="!!customer.id">Customer:
+        <span>{{customer.id}}</span>
     </h1>
     <div class="info-container">
         <div class="row">
@@ -30,12 +30,12 @@
             </mat-form-field>
         </div>
         <div class="row">
-            <mat-form-field id="email" class="col-12 col-md-12 col-lg-12">
-                <input matInput placeholder="Email Address" formControlName="email" />
-                <mat-error *ngIf="email.invalid">
-                    <span *ngIf="email.hasError('required')">Email address is required.</span>
-                    <span *ngIf="email.hasError('maxlength')">Email address cannot exceed 50 characters.</span>
-                    <span *ngIf="email.hasError('email')">Please enter a valid email address</span>
+            <mat-form-field id="emailAddress" class="col-12 col-md-12 col-lg-12">
+                <input matInput placeholder="Email Address" formControlName="emailAddress" />
+                <mat-error *ngIf="emailAddress.invalid">
+                    <span *ngIf="emailAddress.hasError('required')">Email address is required.</span>
+                    <span *ngIf="emailAddress.hasError('maxlength')">Email address cannot exceed 50 characters.</span>
+                    <span *ngIf="emailAddress.hasError('email')">Please enter a valid email address</span>
                 </mat-error>
             </mat-form-field>
         </div>

@@ -1,5 +1,6 @@
 import { Product } from '../../products/entities/product';
 import { Customer } from 'src/app/customers/customers/entities/customer';
+import { ProductCost } from 'src/app/products/entities/product-cost';
 
 export class Order {
 
@@ -30,6 +31,15 @@ export class Order {
         this._name = value;
     }
 
+    private _customerId: number;
+    get customerId(): number {
+        return this._customerId;
+    }
+    set customerId(value: number)
+    {
+        this._customerId = value;
+    }
+
     private _customer: Customer;
     get customer(): Customer {
         return this._customer;
@@ -39,12 +49,12 @@ export class Order {
         this._customer = value;
     }
 
-    private _products: Array<Product>;
-    get products(): Array<Product> {
-        return this._products;
+    private _productsCosts: Array<ProductCost> = new Array<ProductCost>();
+    get productsCosts(): Array<ProductCost> {
+        return this._productsCosts;
     }
-    set products(value: Array<Product>) {
-        this._products = value;
+    set productsCosts(value: Array<ProductCost>) {
+        this._productsCosts = value;
     }
 
     private _total: number;

@@ -1,5 +1,5 @@
-<app-order-form [customer]="customer" #orderForm (isValidChange)="formStatusChange($event)"
+<app-order-form [customer]="customer" [order]="order" #orderForm (isValidChange)="formStatusChange($event)"
     (formUpdated)="formUpdated($event)"></app-order-form>
 <div class="container">
-    <button mat-raised-button class="button-container" (click)="saveCustomer()">Create</button>
+    <button mat-raised-button class="button-container" (click)="saveOrder()">Create</button>
 </div>

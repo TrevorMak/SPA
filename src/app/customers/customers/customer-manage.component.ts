@@ -58,7 +58,7 @@ export class ManageCustomerComponent extends BaseCustomerPage implements OnInit{
   private hasCustomerFieldsChanged(): boolean {
     return !(this.customer.firstName === this.originalCustomer.firstName
     && this.customer.lastName === this.originalCustomer.lastName
-    && this.customer.email === this.originalCustomer.email
+    && this.customer.emailAddress === this.originalCustomer.emailAddress
     && isEqual(this.customer.dob, this.originalCustomer.dob));
 }
 

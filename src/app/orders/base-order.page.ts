@@ -4,9 +4,9 @@ import { OrderFormComponent } from './form/order-form/order-form.component';
 
 export abstract class BaseOrderPage {
 
-  public customer: Order;
+  public order: Order;
 
-  @ViewChild("customerForm", {static: false})
+  @ViewChild("orderForm", {static: false})
   public orderFormComponent: OrderFormComponent;
 
   public canSave: boolean = false;
@@ -19,7 +19,7 @@ export abstract class BaseOrderPage {
     this.setCanSaveOrder();
   }
 
-  public abstract saveCustomer(): void;
+  public abstract saveOrder(): void;
 
   public formUpdated(updated: boolean): void {
     this.isFormUpdated = updated;

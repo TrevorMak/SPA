@@ -1,10 +1,10 @@
-<form class="example-form" [formGroup]="myForm">
+<form class="example-form" [formGroup]="form">
     <mat-form-field class="example-full-width">
       <mat-label>Product Name...</mat-label>
       <input type="text" matInput [formControl]="productControl" [matAutocomplete]="auto">
       <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-          {{option.product.Name}}
+        <mat-option (onSelectionChange)="setProductCost(option)" *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option.product.name}}
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>

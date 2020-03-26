@@ -1,6 +1,11 @@
-<div class="section-header">
+<div class="section-header container">
     <h2 class="title">Add Products</h2>
 </div>
-
+<div class="container">
 <app-product-cost *ngFor="let productCosts of productsCosts"
-    [products]="products"></app-product-cost>
+    [allProducts]="allProducts" [productsCosts]="productsCosts" [productCostsForm]="productCostsForm"></app-product-cost>
+</div>
+
+<div class="container">
+    <button mat-raised-button class="button-container" (click)="addProductCost()">Add Product</button>
+</div>

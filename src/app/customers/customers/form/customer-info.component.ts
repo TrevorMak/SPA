@@ -17,12 +17,11 @@ export class CustomerInfoComponent implements OnInit {
 
   public dob: FormControl;
 
-  public email: BindableFormControl<Customer>;
+  public emailAddress: BindableFormControl<Customer>;
 
   public firstName: BindableFormControl<Customer>;
 
   public lastName: BindableFormControl<Customer>;
-
 
   constructor() { }
 
@@ -33,9 +32,9 @@ export class CustomerInfoComponent implements OnInit {
     this.lastName = new BindableFormControl(this.customer, "lastName");
     this.lastName.setValidators([Validators.required, Validators.maxLength(50)])
 
-    this.email = new BindableFormControl(this.customer, "email");
+    this.emailAddress = new BindableFormControl(this.customer, "emailAddress");
     //Potentially add a custom validator using regex so we can define our own email formats.
-    this.email.setValidators([Validators.required, Validators.maxLength(50), Validators.email])
+    this.emailAddress.setValidators([Validators.required, Validators.maxLength(50), Validators.email])
 
     this.dob = new FormControl(this.customer.dob);
     this.dob.setValidators(Validators.required)
@@ -43,7 +42,7 @@ export class CustomerInfoComponent implements OnInit {
     this.customerInfoForm = new FormGroup({
       firstName: this.firstName,
       lastName: this.lastName,
-      email: this.email,
+      emailAddress: this.emailAddress,
       dob: this.dob
     });
 

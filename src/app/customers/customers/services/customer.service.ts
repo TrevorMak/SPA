@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Customer } from '../entities/customer';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -7,10 +7,7 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class CustomerService {
 
-  private baseUrl: string = "/customers"
-
-  // json-server --watch db.json
-  //npm run start:proxy
+  private baseUrl: string = "https://localhost:44382/api/customers"
 
   constructor(private http: HttpClient) {
   }

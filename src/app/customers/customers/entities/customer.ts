@@ -21,13 +21,13 @@ export class Customer {
         this._dob = value;
     }
     
-    private _email: string;
-    get email(): string {
-        return this._email;
+    private _emailAddress: string;
+    get emailAddress(): string {
+        return this._emailAddress;
     }
-    set email(value: string)
+    set emailAddress(value: string)
     {
-        this._email = value;
+        this._emailAddress = value;
     }
 
     private _firstName: string;

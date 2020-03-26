@@ -84,7 +84,7 @@ export class CustomerOptionsMenuComponent implements OnInit {
   }
 
   private navigateToCreateOrderPage(): void {
-    this.router.navigate([`order-create`], { state: {'customer': this.customer} });
+    this.router.navigate([`order/${this.customer.id}/create`]);
   }
 
   private deleteCustomer(): void {

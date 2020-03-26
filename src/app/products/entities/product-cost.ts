@@ -20,23 +20,32 @@ export class ProductCost {
         this._product = value;
     }
 
-    private _quantity: number;
-    get quantity(): number {
-        return this._quantity;
+    private _productId: number;
+    get productId(): number {
+        return this._productId;
     }
-    set quantity(value: number)
+    set productId(value: number)
     {
-        this._quantity = value;
+        this._productId = value;
     }
 
-    private _subtotal: number;
-    get subtotal(): number {
-        return this._subtotal;
-    }
-    set subtotal(value: number)
-    {
-        this._subtotal = value;
-    }
+    // private _quantity: number;
+    // get quantity(): number {
+    //     return this._quantity;
+    // }
+    // set quantity(value: number)
+    // {
+    //     this._quantity = value;
+    // }
+
+    // private _subtotal: number;
+    // get subtotal(): number {
+    //     return this._subtotal;
+    // }
+    // set subtotal(value: number)
+    // {
+    //     this._subtotal = value;
+    // }
 
 
 }

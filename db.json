@@ -1,20 +1,4 @@
 {
-  "customers": [
-    {
-      "firstName": "asdadad",
-      "lastName": "asdasd",
-      "email": "tt@g.csdadssda",
-      "dob": "2020-03-11T00:00:00.000Z",
-      "id": 5
-    },
-    {
-      "firstName": "Trevor",
-      "lastName": "Mak",
-      "email": "t@g.c",
-      "dob": "2020-03-25T00:00:00.000Z",
-      "id": 6
-    }
-  ],
   "products": [
     {
       "id": 1,
@@ -25,6 +9,136 @@
       "id": 2,
       "name": "Product2",
       "unitPrice": 20
+    }
+  ],
+  "customers": [
+    {
+      "firstName": "Trevor",
+      "lastName": "Mak",
+      "email": "t@g.c",
+      "dob": "2020-03-25T00:00:00.000Z",
+      "id": 6
+    },
+    {
+      "firstName": "sazA",
+      "lastName": "ASD",
+      "email": "ASDASD@G.C",
+      "dob": "2020-03-27T00:00:00.000Z",
+      "id": 7
+    },
+    {
+      "firstName": "sdasda",
+      "lastName": "asdad",
+      "email": "adadad@g.c",
+      "dob": "2020-03-12T00:00:00.000Z",
+      "id": 8
+    },
+    {
+      "firstName": "ref",
+      "lastName": "ertr",
+      "email": "sadasd@g.c",
+      "dob": "2020-03-11T00:00:00.000Z",
+      "id": 9
+    }
+  ],
+  "orders": [
+    {
+      "name": "asdasdad",
+      "date": "2020-03-03T22:42:44.966Z",
+      "id": 1
+    },
+    {
+      "name": "asdasdada",
+      "date": "2020-03-03T22:55:48.671Z",
+      "id": 2
+    },
+    {
+      "name": "2323424",
+      "date": "2020-03-04T00:25:56.818Z",
+      "id": 3
+    },
+    {
+      "name": "whaaaaa",
+      "date": "2020-03-04T00:50:21.582Z",
+      "customerId": 6,
+      "id": 4
+    },
+    {
+      "name": "sup",
+      "date": "2020-03-04T00:52:37.890Z",
+      "customerId": 6,
+      "id": 5
+    },
+    {
+      "name": "4535",
+      "date": "2020-03-04T01:13:55.834Z",
+      "customerId": 6,
+      "id": 6
+    },
+    {
+      "name": "32423424",
+      "date": "2020-03-08T13:04:33.804Z",
+      "customerId": 6,
+      "id": 7
+    },
+    {
+      "name": "asdad",
+      "date": "2020-03-08T14:16:58.215Z",
+      "customerId": 6,
+      "id": 8
+    },
+    {
+      "name": "asdad",
+      "date": "2020-03-08T14:25:41.863Z",
+      "customerId": 6,
+      "productCosts": [
+        {},
+        {}
+      ],
+      "id": 9
+    },
+    {
+      "name": "sadad",
+      "date": "2020-03-08T14:35:54.847Z",
+      "customerId": 7,
+      "productCosts": [
+        {},
+        {},
+        {}
+      ],
+      "id": 10
+    },
+    {
+      "name": "sadad",
+      "date": "2020-03-08T14:45:41.429Z",
+      "customerId": 6,
+      "productCosts": [
+        {},
+        {}
+      ],
+      "id": 11
+    },
+    {
+      "name": "sadad",
+      "date": "2020-03-08T14:49:16.977Z",
+      "customerId": 6,
+      "productCosts": [
+        {
+          "_product": {
+            "id": 1,
+            "name": "Product1",
+            "unitPrice": 10
+          }
+        },
+        {
+          "_product": {
+            "id": 2,
+            "name": "Product2",
+            "unitPrice": 20
+          }
+        }
+      ],
+      "id": 12
     }
   ]
 }

@@ -27,12 +27,11 @@ export class CreateCustomerComponent extends BaseCustomerPage {
       return;
     }
 
-    //temporary work around until we implement an actual web api, json server stores the property e.g _firstName
     const newCustomer =
     {
       firstName: this.customer.firstName,
       lastName: this.customer.lastName,
-      email: this.customer.email,
+      emailAddress: this.customer.emailAddress,
       dob: this.customer.dob
     }
 
